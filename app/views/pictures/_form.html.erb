@@ -2,7 +2,6 @@
   <% if picture.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(picture.errors.count, "error") %> prohibited this picture from being saved:</h2>
-
       <ul>
         <% picture.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -10,22 +9,14 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
     <%= form.label :image %>
-    <%= form.text_area :image %>
+    <%= form.file_field :image %>
   </div>
-
-  <div class="field">
-    <%= form.label :, %>
-    <%= form.text_field :, %>
-  </div>
-
   <div class="field">
     <%= form.label :comment %>
     <%= form.text_field :comment %>
   </div>
-
   <div class="actions">
     <%= form.submit %>
   </div>
