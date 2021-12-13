@@ -2,6 +2,8 @@
 <%= form_with(model: @picture, url: pictures_path, local: true) do |form| %>
   <%= image_tag(@picture.image.url) if @picture.image && @picture.image.url %>
   <%= form.hidden_field :image_cache %>
+  <%= form.hidden_field :comment %>
+  <p>コメント<%= @picture.comment %></p>
   <%= form.submit "投稿" %>
 <% end %>
 <%= form_with(model: @picture, url:new_picture_path, local:true , method:"get") do |form| %>
