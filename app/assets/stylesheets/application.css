@@ -1,4 +1,29 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.content {
+  position: relative;
+  min-height: 100%;
+}
+
 .header {
   background-color: blue;
   color: antiquewhite;
+}
+.footer {
+  background-color: blue;
+  color: antiquewhite;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.yield {
+  padding-bottom: 50px;
 }
